@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kion-recsys"
+version = "1.0.0"
+description = "Reproducible offline movie recommendation on MTS KION"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy==1.26.4", "pandas==2.2.3", "scipy==1.14.1",
+  "scikit-learn==1.6.1", "implicit==0.7.2", "catboost==1.2.8",
+  "matplotlib==3.9.4", "threadpoolctl==3.8.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

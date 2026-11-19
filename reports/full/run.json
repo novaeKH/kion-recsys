@@ -1,0 +1,31 @@
+{
+  "python": "3.11.15",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.1",
+    "implicit": "0.7.2",
+    "catboost": "1.2.8"
+  },
+  "input_sha256": {
+    "interactions.csv": "201dc9114eb309da9df6f5f227ada23a371d668edf64a32090fb613a75162ecf",
+    "items.csv": "027c3a0027b4fe4a8db9d5fa626ab40bab507c96aac81d462db0771eb2cb4a8e",
+    "users.csv": "37b2945240628a3f215e1fb5f79b4cff386d8988b21fa61e5b135aef4541182c"
+  },
+  "raw_rows": 5476251,
+  "raw_users": 962179,
+  "raw_items": 15706,
+  "validation_users": 103258,
+  "validation_catalog": 13087,
+  "ranker_training_rows": 7830078,
+  "ranker_training_queries": 112347,
+  "test_users": 106819,
+  "test_catalog": 13266,
+  "test_unseen_item_targets": 5394,
+  "example_user": 3,
+  "elapsed_seconds": 750.3153754999994,
+  "status": "completed",
+  "sampling": "none"
+}

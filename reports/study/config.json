@@ -1,0 +1,149 @@
+{
+  "experiment": {
+    "seed": 42,
+    "min_watched_pct": 20,
+    "k": 10,
+    "candidate_depth": 30,
+    "models": {
+      "Popularity": [
+        {}
+      ],
+      "ItemKNN": [
+        {
+          "neighbors": 50,
+          "min_item_interactions": 20
+        },
+        {
+          "neighbors": 100,
+          "min_item_interactions": 20
+        }
+      ],
+      "ALS": [
+        {
+          "factors": 32,
+          "regularization": 0.05,
+          "iterations": 15
+        },
+        {
+          "factors": 64,
+          "regularization": 0.05,
+          "iterations": 15
+        },
+        {
+          "factors": 64,
+          "regularization": 0.1,
+          "iterations": 15
+        }
+      ],
+      "BPR": [
+        {
+          "factors": 32,
+          "regularization": 0.01,
+          "iterations": 50
+        },
+        {
+          "factors": 64,
+          "regularization": 0.01,
+          "iterations": 50
+        }
+      ],
+      "Content": [
+        {
+          "neighbors": 50
+        },
+        {
+          "neighbors": 100
+        }
+      ]
+    },
+    "candidate_models": {
+      "Popularity": {},
+      "ItemKNN": {
+        "neighbors": 50,
+        "min_item_interactions": 20
+      },
+      "ALS": {
+        "factors": 64,
+        "regularization": 0.05,
+        "iterations": 15
+      },
+      "Content": {
+        "neighbors": 100
+      }
+    },
+    "hybrid_weights": [
+      {
+        "Popularity": 0.5,
+        "ItemKNN": 1,
+        "ALS": 1,
+        "Content": 0.2
+      },
+      {
+        "Popularity": 0.5,
+        "ItemKNN": 1,
+        "ALS": 1,
+        "Content": 1
+      }
+    ],
+    "ranker": [
+      {
+        "iterations": 100,
+        "depth": 4
+      },
+      {
+        "iterations": 150,
+        "depth": 6
+      }
+    ]
+  },
+  "study": {
+    "test_starts": [
+      "2021-08-02",
+      "2021-08-09",
+      "2021-08-16"
+    ],
+    "popularity_windows": [
+      7,
+      14,
+      30
+    ],
+    "ablation_cutoff": "2021-08-16",
+    "feature_groups": {
+      "activity": [
+        "user_activity",
+        "user_recency_days",
+        "item_popularity",
+        "item_recent_popularity"
+      ],
+      "scores": [
+        "rr_Popularity",
+        "rr_ItemKNN",
+        "rr_ALS",
+        "rr_Content",
+        "source_count",
+        "rrf_score",
+        "user_activity",
+        "item_popularity",
+        "item_recent_popularity",
+        "user_recency_days",
+        "als_score"
+      ],
+      "full": [
+        "rr_Popularity",
+        "rr_ItemKNN",
+        "rr_ALS",
+        "rr_Content",
+        "user_activity",
+        "item_popularity",
+        "item_recent_popularity",
+        "user_recency_days",
+        "source_count",
+        "rrf_score",
+        "release_year",
+        "age_rating",
+        "is_series",
+        "als_score"
+      ]
+    }
+  }
+}

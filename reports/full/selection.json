@@ -1,0 +1,34 @@
+{
+  "selection_metric": "MAP@10",
+  "parameters": {
+    "Popularity": {},
+    "ItemKNN": {
+      "neighbors": 100,
+      "min_item_interactions": 20
+    },
+    "ALS": {
+      "factors": 32,
+      "regularization": 0.05,
+      "iterations": 15
+    },
+    "BPR": {
+      "factors": 32,
+      "regularization": 0.01,
+      "iterations": 50
+    },
+    "Content": {
+      "neighbors": 50
+    },
+    "Hybrid": {
+      "Popularity": 0.5,
+      "ItemKNN": 1,
+      "ALS": 1,
+      "Content": 0.2
+    },
+    "CatBoost": {
+      "iterations": 150,
+      "depth": 6
+    }
+  },
+  "status": "frozen_before_test"
+}

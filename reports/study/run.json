@@ -1,0 +1,27 @@
+{
+  "python": "3.11.15",
+  "platform": "macOS-26.3.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.1",
+    "implicit": "0.7.2",
+    "catboost": "1.2.8"
+  },
+  "input_sha256": {
+    "interactions.csv": "201dc9114eb309da9df6f5f227ada23a371d668edf64a32090fb613a75162ecf",
+    "items.csv": "027c3a0027b4fe4a8db9d5fa626ab40bab507c96aac81d462db0771eb2cb4a8e",
+    "users.csv": "37b2945240628a3f215e1fb5f79b4cff386d8988b21fa61e5b135aef4541182c"
+  },
+  "raw_rows": 5476251,
+  "raw_users": 962179,
+  "raw_items": 15706,
+  "status": "completed",
+  "sampling": "none",
+  "folds": 3,
+  "resumed_after_interruption": true,
+  "resumed_elapsed_seconds": 595.588635625,
+  "elapsed_seconds": 17652.964191675186,
+  "timing_note": "Elapsed wall time includes the interruption; snapshots and the first completed fold were reused."
+}
